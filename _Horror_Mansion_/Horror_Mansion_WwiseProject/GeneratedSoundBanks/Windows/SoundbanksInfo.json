@@ -311,11 +311,43 @@
     "Type": "User",
     "GUID": "{68FEB4CA-3C1B-4018-848B-070A85B21B05}",
     "Language": "SFX",
-    "Hash": "{68226EC8-E27F-D422-AC5F-452C69F9EA72}",
+    "Hash": "{78B82C13-E35E-93E2-DE1F-0B4AE1B4B01F}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
     "Media": [
+     {
+      "Id": "6454643",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Tick 3.wav",
+      "CachePath": "8E/{8E6C23BA-A560-7928-73B9-302711A399F9}.wem"
+     },
+     {
+      "Id": "67356994",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Tick 4.wav",
+      "CachePath": "80/{8005151A-DAD3-AB43-8758-0C37421BD37A}.wem"
+     },
+     {
+      "Id": "179096774",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Tick 1.wav",
+      "CachePath": "3D/{3D3530A4-AE4F-8FCE-DB7B-FECEB4DA0A3D}.wem"
+     },
+     {
+      "Id": "239373596",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Tick 2.wav",
+      "CachePath": "4C/{4C58372B-4EA1-7B69-C250-18770260775D}.wem"
+     },
      {
       "Id": "311063892",
       "Language": "SFX",
@@ -333,6 +365,14 @@
       "CachePath": "05/{05645C52-5D86-D254-AE09-F1EC97848C60}.wem"
      },
      {
+      "Id": "402621008",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Tock 4.wav",
+      "CachePath": "5F/{5F5BB9C9-937A-039C-1363-DF5E16B589C9}.wem"
+     },
+     {
       "Id": "402748612",
       "Language": "SFX",
       "Streaming": "false",
@@ -347,6 +387,38 @@
       "Location": "Memory",
       "ShortName": "Silence.wav",
       "CachePath": "07/{0742D5EA-D81F-4DF3-E865-DC1E62A8104D}.wem"
+     },
+     {
+      "Id": "703500801",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Light switch.wav",
+      "CachePath": "2A/{2A7B6823-0B51-02BE-C25D-9235E44A0F54}.wem"
+     },
+     {
+      "Id": "703646204",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Tock 3.wav",
+      "CachePath": "08/{081F3F20-216B-4E4A-3EB0-D0FC668B33A0}.wem"
+     },
+     {
+      "Id": "777946947",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Tock 2.wav",
+      "CachePath": "58/{585E51CE-3C3D-057D-0B24-6621702E11BD}.wem"
+     },
+     {
+      "Id": "937868944",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Tock 1.wav",
+      "CachePath": "4B/{4B58A94E-DB13-DB0A-87D9-31072B12C0D2}.wem"
      }
     ],
     "Plugins": {
@@ -395,11 +467,11 @@
       "GUID": "{363AA09B-E08C-4480-B683-DAB0E5D86E3E}",
       "Color": "3",
       "DurationType": "OneShot",
-      "DurationMin": "0.09166667",
-      "DurationMax": "0.09166667",
+      "DurationMin": "0.20061208",
+      "DurationMax": "0.40122417",
       "MediaRefs": [
        {
-        "Id": "311063892"
+        "Id": "703500801"
        }
       ],
       "PluginRefs": {
@@ -809,11 +881,32 @@
       "ObjectPath": "\\Events\\Default Work Unit\\SFX General\\Clocks\\Play_Grandfather_Clock_Ticking",
       "GUID": "{A15199B0-F54B-4441-B224-B4258866278A}",
       "Color": "9",
-      "MaxAttenuation": "40",
+      "MaxAttenuation": "18",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
-        "Id": "389546834"
+        "Id": "6454643"
+       },
+       {
+        "Id": "67356994"
+       },
+       {
+        "Id": "179096774"
+       },
+       {
+        "Id": "239373596"
+       },
+       {
+        "Id": "402621008"
+       },
+       {
+        "Id": "703646204"
+       },
+       {
+        "Id": "777946947"
+       },
+       {
+        "Id": "937868944"
        }
       ]
      },
@@ -883,11 +976,11 @@
       "GUID": "{F3E1D625-D9C8-4217-ACA4-73024FCB254C}",
       "Color": "3",
       "DurationType": "OneShot",
-      "DurationMin": "0.09166667",
-      "DurationMax": "0.09166667",
+      "DurationMin": "0.20061208",
+      "DurationMax": "0.40122417",
       "MediaRefs": [
        {
-        "Id": "311063892"
+        "Id": "703500801"
        }
       ],
       "PluginRefs": {
@@ -1069,11 +1162,32 @@
       "ObjectPath": "\\Events\\Default Work Unit\\SFX General\\Clocks\\Play_Wall_Clock",
       "GUID": "{F2612BC0-EA17-4837-9E8B-382EAD5D4034}",
       "Color": "9",
-      "MaxAttenuation": "40",
+      "MaxAttenuation": "18",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
-        "Id": "389546834"
+        "Id": "6454643"
+       },
+       {
+        "Id": "67356994"
+       },
+       {
+        "Id": "179096774"
+       },
+       {
+        "Id": "239373596"
+       },
+       {
+        "Id": "402621008"
+       },
+       {
+        "Id": "703646204"
+       },
+       {
+        "Id": "777946947"
+       },
+       {
+        "Id": "937868944"
        }
       ]
      },
@@ -1322,6 +1436,6 @@
     ]
    }
   ],
-  "FileHash": "{5E6B318B-B0BB-3986-5B80-02FF7A812626}"
+  "FileHash": "{E8F28BE5-A50E-3B36-0B78-58FAFF0F428A}"
  }
 }
