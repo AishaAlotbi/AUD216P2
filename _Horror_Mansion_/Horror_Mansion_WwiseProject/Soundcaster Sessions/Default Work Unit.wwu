@@ -1,9 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{80D34CCC-0FC9-498A-9A19-D673507EB59F}" SchemaVersion="133">
+<WwiseDocument Type="WorkUnit" ID="{80D34CCC-0FC9-498A-9A19-D673507EB59F}" SchemaVersion="123">
 	<SoundcasterSessions>
 		<WorkUnit Name="Default Work Unit" ID="{80D34CCC-0FC9-498A-9A19-D673507EB59F}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundcasterSession Name="Soundcaster" ID="{9474CA0A-2069-4BC3-9ECE-9E12E10434FA}"/>
+				<SoundcasterSession Name="Soundcaster" ID="{9474CA0A-2069-4BC3-9ECE-9E12E10434FA}">
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Bus_Volume_SFX" ID="{62ED8408-2049-46E5-ACCB-266ECBB822AF}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Aux_Basement_Reverb" ID="{6D429EAF-C12A-4937-87A6-A12A878228DE}"/>
+							<Value>-96</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="RTPC_Occlusion_Volume" ID="{2CDAEC9A-79F2-4CF0-9809-335ED47FF3F0}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Aux_Cathedral_Reverb" ID="{938CA322-1F84-4F6D-B86B-2234247A31B4}"/>
+							<Value>-50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="RTPC_Occlusion_LoPass" ID="{22574F28-1D30-4F9E-83F5-568B6408C2AE}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Inside" ID="{23B0A018-7750-49C2-8D06-CA1902E761B6}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Carpet" ID="{81BA2B2C-E5A7-4698-BE1D-12447EE52E71}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
 				<SoundcasterSession Name="SoundCaster footsteps" ID="{3AD64256-0878-4F02-825A-AFD4AD5346E1}">
 					<ModuleList>
 						<Module>
@@ -35,6 +64,23 @@
 							<Position X="3" Y="0"/>
 						</Module>
 					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="RTPC_Occlusion_Volume" ID="{2CDAEC9A-79F2-4CF0-9809-335ED47FF3F0}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="RTPC_Occlusion_LoPass" ID="{22574F28-1D30-4F9E-83F5-568B6408C2AE}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="None" ID="{C03B9DAB-46D4-425A-8C82-53BB57AD5CB6}"/>
+						<CurrentStateRef Name="None" ID="{2B340803-21E6-4397-8124-6270A1F55ED6}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Carpet" ID="{81BA2B2C-E5A7-4698-BE1D-12447EE52E71}"/>
+					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{C45DB433-D797-4E67-951E-85BD25C4D08A}" SchemaVersion="133">
+<WwiseDocument Type="WorkUnit" ID="{C45DB433-D797-4E67-951E-85BD25C4D08A}" SchemaVersion="123">
 	<Busses>
 		<WorkUnit Name="Default Work Unit" ID="{C45DB433-D797-4E67-951E-85BD25C4D08A}" PersistMode="Standalone">
 			<ChildrenList>
@@ -20,8 +20,9 @@
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
-									
-								<RTPC Name="" ID="{B58F668B-ED19-455D-9008-5B7B0D2C7627}" ShortID="924428416">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{B58F668B-ED19-455D-9008-5B7B0D2C7627}" ShortID="924428416">
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="Volume"/>
 												</PropertyList>
@@ -51,7 +52,10 @@
 														</Custom>
 													</Reference>
 												</ReferenceList>
-											</RTPC></ObjectList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
 							</ObjectLists>
 						</Bus>
 						<Bus Name="Ambience Bus" ID="{185B51CB-54A5-4630-B64F-E52AEA6A79C0}">
@@ -66,8 +70,9 @@
 							</PropertyList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
-									
-								<RTPC Name="" ID="{FF1E87BD-3D60-49D5-9D91-BD2AC1B721EC}" ShortID="580382721">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{FF1E87BD-3D60-49D5-9D91-BD2AC1B721EC}" ShortID="580382721">
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="Volume"/>
 												</PropertyList>
@@ -97,7 +102,10 @@
 														</Custom>
 													</Reference>
 												</ReferenceList>
-											</RTPC></ObjectList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
 							</ObjectLists>
 						</Bus>
 						<Bus Name="Music Bus" ID="{D3CD0F76-1225-45A7-BC07-EC116BD19DD1}">
@@ -107,8 +115,9 @@
 							</PropertyList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
-									
-								<RTPC Name="" ID="{29587F35-2E0B-4050-873D-66026AC67F6E}" ShortID="358220780">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{29587F35-2E0B-4050-873D-66026AC67F6E}" ShortID="358220780">
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="Volume"/>
 												</PropertyList>
@@ -138,7 +147,10 @@
 														</Custom>
 													</Reference>
 												</ReferenceList>
-											</RTPC></ObjectList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
 							</ObjectLists>
 						</Bus>
 						<Bus Name="Footsteps Bus" ID="{7BBF3419-2A01-4189-85BA-90BF54672D01}">
@@ -153,8 +165,9 @@
 							</PropertyList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
-									
-								<RTPC Name="" ID="{BD837915-6D80-465B-A0B0-D8EDF7056426}" ShortID="846767876">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{BD837915-6D80-465B-A0B0-D8EDF7056426}" ShortID="846767876">
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="Volume"/>
 												</PropertyList>
@@ -184,27 +197,35 @@
 														</Custom>
 													</Reference>
 												</ReferenceList>
-											</RTPC></ObjectList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
 							</ObjectLists>
 						</Bus>
 						<AuxBus Name="Aux_Reverb_Demo" ID="{22F4819D-23FD-4B2D-90F0-DD0DF8139677}">
 							<ObjectLists>
 								<ObjectList Name="Effects">
-									
-								<EffectSlot Name="" ID="{63B56B5B-7AD3-4437-A93E-E927C8AC0B9F}" ShortID="1007289626">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{63B56B5B-7AD3-4437-A93E-E927C8AC0B9F}" ShortID="1007289626">
 												<ReferenceList>
 													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 														<ObjectRef Name="Church_Small_Wood" ID="{940CCB47-F031-4C6A-B0E6-726CAC418C02}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 													</Reference>
 												</ReferenceList>
-											</EffectSlot></ObjectList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
 							</ObjectLists>
 						</AuxBus>
 					</ChildrenList>
 					<ObjectLists>
 						<ObjectList Name="Effects">
-							
-						<EffectSlot Name="" ID="{D0938239-FEFC-44F3-804A-2C7BB0593B1A}" ShortID="536643763">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{D0938239-FEFC-44F3-804A-2C7BB0593B1A}" ShortID="536643763">
 										<ReferenceList>
 											<Reference Name="Effect">
 												<Custom>
@@ -216,7 +237,10 @@
 												</Custom>
 											</Reference>
 										</ReferenceList>
-									</EffectSlot></ObjectList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
 					</ObjectLists>
 				</Bus>
 			</ChildrenList>

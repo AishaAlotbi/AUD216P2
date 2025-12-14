@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{157A0879-55FC-43E9-B85E-47E53620CAAC}" SchemaVersion="133">
-	<Containers>
+<WwiseDocument Type="WorkUnit" ID="{157A0879-55FC-43E9-B85E-47E53620CAAC}" SchemaVersion="123">
+	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{157A0879-55FC-43E9-B85E-47E53620CAAC}" PersistMode="Standalone">
 			<ChildrenList>
 				<Folder Name="Footsteps" ID="{275242F0-C828-4E63-B424-5A2973F20A27}" ShortID="798158987">
@@ -504,9 +504,9 @@
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
-									
-									
-								<RTPC Name="" ID="{02AB2283-4819-45F1-AD00-EDDC384590D5}" ShortID="828450194">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{02AB2283-4819-45F1-AD00-EDDC384590D5}" ShortID="828450194">
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="Volume"/>
 												</PropertyList>
@@ -536,7 +536,12 @@
 														</Custom>
 													</Reference>
 												</ReferenceList>
-											</RTPC><RTPC Name="" ID="{8A7BC035-5563-4DAE-AE6D-48AC1A147DA7}" ShortID="115795841">
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{8A7BC035-5563-4DAE-AE6D-48AC1A147DA7}" ShortID="115795841">
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
 												</PropertyList>
@@ -566,7 +571,10 @@
 														</Custom>
 													</Reference>
 												</ReferenceList>
-											</RTPC></ObjectList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
 							</ObjectLists>
 						</RandomSequenceContainer>
 					</ChildrenList>
@@ -658,7 +666,7 @@
 								<ActiveSource Name="Beep" ID="{1A2650E2-C6E0-4D92-8B6A-BC0E522AE4AF}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<PropertyContainer Name="Phone - mixer" ID="{F20461CA-75D4-45B9-BD7D-7D6C06438A70}" ShortID="639676332">
+						<ActorMixer Name="Phone - mixer" ID="{F20461CA-75D4-45B9-BD7D-7D6C06438A70}" ShortID="639676332">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
@@ -735,7 +743,7 @@
 														</LowPassFilterUsage>
 														<HighPassFilterUsage>
 															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-														</HighPassFilterUsage><DualShelfUsage><CurveUsageInfo Platform="Linked" CurveToUse="None"/></DualShelfUsage>
+														</HighPassFilterUsage>
 														<SpreadUsage>
 															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
 														</SpreadUsage>
@@ -750,7 +758,7 @@
 														</ObstructionLPFUsage>
 														<ObstructionHPFUsage>
 															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</ObstructionHPFUsage><ObstructionDSFUsage><CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/></ObstructionDSFUsage>
+														</ObstructionHPFUsage>
 														<OcclusionVolumeUsage>
 															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
 														</OcclusionVolumeUsage>
@@ -759,7 +767,7 @@
 														</OcclusionLPFUsage>
 														<OcclusionHPFUsage>
 															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</OcclusionHPFUsage><OcclusionDSFUsage><CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/></OcclusionDSFUsage>
+														</OcclusionHPFUsage>
 														<DiffractionVolumeUsage>
 															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
 														</DiffractionVolumeUsage>
@@ -768,7 +776,7 @@
 														</DiffractionLPFUsage>
 														<DiffractionHPFUsage>
 															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</DiffractionHPFUsage><DiffractionDSFUsage><CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/></DiffractionDSFUsage>
+														</DiffractionHPFUsage>
 														<TransmissionVolumeUsage>
 															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
 														</TransmissionVolumeUsage>
@@ -777,7 +785,7 @@
 														</TransmissionLPFUsage>
 														<TransmissionHPFUsage>
 															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-														</TransmissionHPFUsage><TransmissionDSFUsage><CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/></TransmissionDSFUsage>
+														</TransmissionHPFUsage>
 													</CurveUsageInfoList>
 												</Attenuation>
 											</Custom>
@@ -844,22 +852,26 @@
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="Effects">
-											
-										<EffectSlot Name="" ID="{8CC61A57-D5F6-475A-9477-4B9BE381240B}" ShortID="889404324">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{8CC61A57-D5F6-475A-9477-4B9BE381240B}" ShortID="889404324">
 														<ReferenceList>
 															<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 																<ObjectRef Name="Dual_Filters_Narrow_Bandwidth" ID="{A24607C6-04E1-4D41-B513-28C0914D138D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 															</Reference>
 														</ReferenceList>
-													</EffectSlot></ObjectList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
 									</ObjectLists>
 								</RandomSequenceContainer>
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
-									
-									
-								<RTPC Name="" ID="{58258309-67A9-44DC-A387-369F7776E342}" ShortID="373433632">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{58258309-67A9-44DC-A387-369F7776E342}" ShortID="373433632">
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="Volume"/>
 												</PropertyList>
@@ -889,7 +901,12 @@
 														</Custom>
 													</Reference>
 												</ReferenceList>
-											</RTPC><RTPC Name="" ID="{10E79A4A-8C5B-4A5A-934B-1585D0A30C75}" ShortID="757532511">
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{10E79A4A-8C5B-4A5A-934B-1585D0A30C75}" ShortID="757532511">
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
 												</PropertyList>
@@ -919,9 +936,12 @@
 														</Custom>
 													</Reference>
 												</ReferenceList>
-											</RTPC></ObjectList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
 							</ObjectLists>
-						</PropertyContainer>
+						</ActorMixer>
 						<Sound Name="Objective completed" ID="{58C9DE4B-8095-422B-83A9-BB5E88D9B0E2}" ShortID="319701334">
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -975,9 +995,14 @@
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="Effects">
-									
-									
-								<EffectSlot Name="" ID="{843606D8-E8C3-4C50-BEA8-410753015B1A}" ShortID="975306374"/><EffectSlot Name="" ID="{7B687E2A-A02D-4ADF-8E2E-9016F519C87D}" ShortID="627599518">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{843606D8-E8C3-4C50-BEA8-410753015B1A}" ShortID="975306374"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{7B687E2A-A02D-4ADF-8E2E-9016F519C87D}" ShortID="627599518">
 												<ReferenceList>
 													<Reference Name="Effect">
 														<Custom>
@@ -989,7 +1014,10 @@
 														</Custom>
 													</Reference>
 												</ReferenceList>
-											</EffectSlot></ObjectList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
 							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="Beep" ID="{34576BE4-6397-4C37-A89F-DEFF2ACAA784}" Platform="Linked"/>
@@ -1038,9 +1066,9 @@
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
-									
-									
-								<RTPC Name="" ID="{0247778F-EEF2-494B-8371-5DDFC3B55526}" ShortID="284193320">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{0247778F-EEF2-494B-8371-5DDFC3B55526}" ShortID="284193320">
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
 												</PropertyList>
@@ -1070,7 +1098,12 @@
 														</Custom>
 													</Reference>
 												</ReferenceList>
-											</RTPC><RTPC Name="" ID="{B12613E6-6B7A-42DD-BB50-C38ED19D1975}" ShortID="797637907">
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{B12613E6-6B7A-42DD-BB50-C38ED19D1975}" ShortID="797637907">
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="Volume"/>
 												</PropertyList>
@@ -1100,7 +1133,10 @@
 														</Custom>
 													</Reference>
 												</ReferenceList>
-											</RTPC></ObjectList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
 							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="Beep" ID="{7E1DB6A5-D962-40E2-BF45-666D3BDFD26D}" Platform="Linked"/>
@@ -1168,7 +1204,7 @@
 								<StateGroupList>
 									<StateGroupInfo>
 										<StateGroupRef Name="Upstairs_Downstairs" ID="{22D73EAE-B3C7-466E-A6AE-C17B6911B76D}"/>
-									<StateGroupInfo Name="" ID="{59CDCFC3-FA0B-4F61-B0CF-FBC1ED4AC3F2}"/></StateGroupInfo>
+									</StateGroupInfo>
 								</StateGroupList>
 								<CustomStateList>
 									<CustomState>
@@ -1187,9 +1223,9 @@
 							</StateInfo>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
-									
-									
-								<RTPC Name="" ID="{0101D9CA-6C78-4D35-9B94-C855B055ED97}" ShortID="969495230">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{0101D9CA-6C78-4D35-9B94-C855B055ED97}" ShortID="969495230">
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
 												</PropertyList>
@@ -1219,7 +1255,12 @@
 														</Custom>
 													</Reference>
 												</ReferenceList>
-											</RTPC><RTPC Name="" ID="{6ABF3F0B-0995-4314-82C9-F7B3C3475B2D}" ShortID="613918461">
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{6ABF3F0B-0995-4314-82C9-F7B3C3475B2D}" ShortID="613918461">
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="Volume"/>
 												</PropertyList>
@@ -1249,7 +1290,10 @@
 														</Custom>
 													</Reference>
 												</ReferenceList>
-											</RTPC></ObjectList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
 							</ObjectLists>
 						</RandomSequenceContainer>
 						<Sound Name="Gramophone music" ID="{44839A4C-EB1B-454F-BF49-8B0D078BE93B}" ShortID="1004194732">
@@ -1278,7 +1322,7 @@
 								<StateGroupList>
 									<StateGroupInfo>
 										<StateGroupRef Name="Upstairs_Downstairs" ID="{22D73EAE-B3C7-466E-A6AE-C17B6911B76D}"/>
-									<StateGroupInfo Name="" ID="{A6B50DE6-0DBA-48FF-8F65-9C2E0AE428D3}"/></StateGroupInfo>
+									</StateGroupInfo>
 								</StateGroupList>
 								<CustomStateList>
 									<CustomState>
@@ -1297,9 +1341,9 @@
 							</StateInfo>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
-									
-									
-								<RTPC Name="" ID="{B45BBCC8-25BB-48E8-AAF5-BB2EBA732EFE}" ShortID="39098406">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{B45BBCC8-25BB-48E8-AAF5-BB2EBA732EFE}" ShortID="39098406">
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
 												</PropertyList>
@@ -1329,7 +1373,12 @@
 														</Custom>
 													</Reference>
 												</ReferenceList>
-											</RTPC><RTPC Name="" ID="{522EF25E-8246-43AC-80ED-E237C6C75050}" ShortID="278449179">
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{522EF25E-8246-43AC-80ED-E237C6C75050}" ShortID="278449179">
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="Volume"/>
 												</PropertyList>
@@ -1359,7 +1408,10 @@
 														</Custom>
 													</Reference>
 												</ReferenceList>
-											</RTPC></ObjectList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
 							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="Beep" ID="{793C4C71-01F1-46FC-A9B4-CCC0BC218FA4}" Platform="Linked"/>
@@ -1448,7 +1500,7 @@
 								<StateGroupList>
 									<StateGroupInfo>
 										<StateGroupRef Name="Location" ID="{D3A55F78-6D6D-4E07-9E48-99EFBFD8DA2B}"/>
-									<StateGroupInfo Name="" ID="{FBE27F07-696A-4472-89FB-65D669D74F5C}"/></StateGroupInfo>
+									</StateGroupInfo>
 								</StateGroupList>
 								<CustomStateList>
 									<CustomState>
@@ -1592,7 +1644,7 @@
 								<StateGroupList>
 									<StateGroupInfo>
 										<StateGroupRef Name="Location" ID="{D3A55F78-6D6D-4E07-9E48-99EFBFD8DA2B}"/>
-									<StateGroupInfo Name="" ID="{3C62F1A7-E004-4E66-913E-10175CBD2F11}"/></StateGroupInfo>
+									</StateGroupInfo>
 								</StateGroupList>
 								<CustomStateList>
 									<CustomState>
@@ -1698,7 +1750,7 @@
 								<StateGroupList>
 									<StateGroupInfo>
 										<StateGroupRef Name="Location" ID="{D3A55F78-6D6D-4E07-9E48-99EFBFD8DA2B}"/>
-									<StateGroupInfo Name="" ID="{58C83B00-5C37-46CA-9921-D655BA8BB7D8}"/></StateGroupInfo>
+									</StateGroupInfo>
 								</StateGroupList>
 								<CustomStateList>
 									<CustomState>
@@ -1785,9 +1837,9 @@
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
-									
-									
-								<RTPC Name="" ID="{5484E16E-27D5-40EC-9C74-FA6982CAB2D3}" ShortID="838638462">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{5484E16E-27D5-40EC-9C74-FA6982CAB2D3}" ShortID="838638462">
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
 												</PropertyList>
@@ -1817,7 +1869,12 @@
 														</Custom>
 													</Reference>
 												</ReferenceList>
-											</RTPC><RTPC Name="" ID="{C6680128-BF1A-4ED8-9078-5242D40667CD}" ShortID="419219168">
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{C6680128-BF1A-4ED8-9078-5242D40667CD}" ShortID="419219168">
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="Volume"/>
 												</PropertyList>
@@ -1847,7 +1904,10 @@
 														</Custom>
 													</Reference>
 												</ReferenceList>
-											</RTPC></ObjectList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
 							</ObjectLists>
 						</RandomSequenceContainer>
 					</ChildrenList>
@@ -1969,17 +2029,17 @@
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="Playlist">
-											
-											
-										<PluginInnerObject Name="" ID="{6BAF91B7-D31B-40AF-A09E-A700705806D9}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86"><ReferenceList><Reference Name="PlaylistObject">
+											<Reference>
 												<ObjectRef Name="Tick" ID="{1470AC47-6E69-4ED1-80E3-EBDF826C6CC7}" WorkUnitID="{157A0879-55FC-43E9-B85E-47E53620CAAC}"/>
-											</Reference></ReferenceList></PluginInnerObject><PluginInnerObject Name="" ID="{566EF6A4-8DE4-4616-9EFE-12C3FF4258A8}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86"><ReferenceList><Reference Name="PlaylistObject">
+											</Reference>
+											<Reference>
 												<ObjectRef Name="Tock" ID="{08316378-1E36-4A37-9614-DAD687C650ED}" WorkUnitID="{157A0879-55FC-43E9-B85E-47E53620CAAC}"/>
-											</Reference></ReferenceList></PluginInnerObject></ObjectList>
+											</Reference>
+										</ObjectList>
 										<ObjectList Name="RTPC">
-											
-											
-										<RTPC Name="" ID="{078F882B-35BE-4FA2-A3EA-619CD68081F5}" ShortID="618900881">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{078F882B-35BE-4FA2-A3EA-619CD68081F5}" ShortID="618900881">
 														<PropertyList>
 															<Property Name="PropertyName" Type="string" Value="Volume"/>
 														</PropertyList>
@@ -2009,7 +2069,12 @@
 																</Custom>
 															</Reference>
 														</ReferenceList>
-													</RTPC><RTPC Name="" ID="{039C10F7-76D1-44E8-99B2-3C503C8E2C25}" ShortID="722960221">
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{039C10F7-76D1-44E8-99B2-3C503C8E2C25}" ShortID="722960221">
 														<PropertyList>
 															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
 														</PropertyList>
@@ -2039,7 +2104,10 @@
 																</Custom>
 															</Reference>
 														</ReferenceList>
-													</RTPC></ObjectList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
 									</ObjectLists>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Small clocks" ID="{BC47005D-6EF6-40E1-B477-919403DBE08C}" ShortID="494630067">
@@ -2139,13 +2207,13 @@
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="Playlist">
-											
-											
-										<PluginInnerObject Name="" ID="{59F5609F-7832-4139-A3A7-ECF5E7EA3540}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86"><ReferenceList><Reference Name="PlaylistObject">
+											<Reference>
 												<ObjectRef Name="Tick" ID="{8E4F713B-8FF3-4C46-BC53-A34A2702A621}" WorkUnitID="{157A0879-55FC-43E9-B85E-47E53620CAAC}"/>
-											</Reference></ReferenceList></PluginInnerObject><PluginInnerObject Name="" ID="{DE557A83-9903-42F6-B504-4F8ACCAD1CBF}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86"><ReferenceList><Reference Name="PlaylistObject">
+											</Reference>
+											<Reference>
 												<ObjectRef Name="Tock" ID="{C422637D-19A8-4D30-90A1-641F967CAC4C}" WorkUnitID="{157A0879-55FC-43E9-B85E-47E53620CAAC}"/>
-											</Reference></ReferenceList></PluginInnerObject></ObjectList>
+											</Reference>
+										</ObjectList>
 									</ObjectLists>
 								</RandomSequenceContainer>
 							</ChildrenList>
@@ -2229,11 +2297,15 @@
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="Effects">
-									
-								<EffectSlot Name="" ID="{3DE6F82B-48D7-42A9-B85E-1CB06CCA1D1D}" ShortID="118421097"/></ObjectList>
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{3DE6F82B-48D7-42A9-B85E-1CB06CCA1D1D}" ShortID="118421097"/>
+										</Local>
+									</Reference>
+								</ObjectList>
 							</ObjectLists>
 						</RandomSequenceContainer>
-						<PropertyContainer Name="Furnace - mixer" ID="{D8557118-D498-4327-B20E-08E774EEEBAA}" ShortID="967636621">
+						<ActorMixer Name="Furnace - mixer" ID="{D8557118-D498-4327-B20E-08E774EEEBAA}" ShortID="967636621">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
@@ -2307,7 +2379,7 @@
 								<StateGroupList>
 									<StateGroupInfo>
 										<StateGroupRef Name="Upstairs_Downstairs" ID="{22D73EAE-B3C7-466E-A6AE-C17B6911B76D}"/>
-									<StateGroupInfo Name="" ID="{A5662BCA-87F1-4D0C-9F09-302A734BFF09}"/></StateGroupInfo>
+									</StateGroupInfo>
 								</StateGroupList>
 								<CustomStateList>
 									<CustomState>
@@ -2326,9 +2398,9 @@
 							</StateInfo>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
-									
-									
-								<RTPC Name="" ID="{8E2B3DD8-7A23-4DD2-838B-AF42E21A84B5}" ShortID="1041345335">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{8E2B3DD8-7A23-4DD2-838B-AF42E21A84B5}" ShortID="1041345335">
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
 												</PropertyList>
@@ -2358,7 +2430,12 @@
 														</Custom>
 													</Reference>
 												</ReferenceList>
-											</RTPC><RTPC Name="" ID="{A5BC1DC3-578F-4F79-BE8F-6EBD5B0A8A7A}" ShortID="28571357">
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{A5BC1DC3-578F-4F79-BE8F-6EBD5B0A8A7A}" ShortID="28571357">
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="Volume"/>
 												</PropertyList>
@@ -2388,9 +2465,12 @@
 														</Custom>
 													</Reference>
 												</ReferenceList>
-											</RTPC></ObjectList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
 							</ObjectLists>
-						</PropertyContainer>
+						</ActorMixer>
 						<Sound Name="Fridge" ID="{99CD44C7-5F27-4D81-A34A-F0C44A4A2673}" ShortID="258835925">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
@@ -2418,9 +2498,9 @@
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
-									
-									
-								<RTPC Name="" ID="{1E86F46D-53A0-4C61-8D4A-3706C08E2C41}" ShortID="1024447896">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{1E86F46D-53A0-4C61-8D4A-3706C08E2C41}" ShortID="1024447896">
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="Volume"/>
 												</PropertyList>
@@ -2450,7 +2530,12 @@
 														</Custom>
 													</Reference>
 												</ReferenceList>
-											</RTPC><RTPC Name="" ID="{25F8267A-D69D-49A1-839A-0214E1A5288D}" ShortID="364609561">
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{25F8267A-D69D-49A1-839A-0214E1A5288D}" ShortID="364609561">
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
 												</PropertyList>
@@ -2480,7 +2565,10 @@
 														</Custom>
 													</Reference>
 												</ReferenceList>
-											</RTPC></ObjectList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
 							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="Silence" ID="{C413231C-8407-4601-83CA-9B92D40521CE}" Platform="Linked"/>
@@ -2570,9 +2658,9 @@
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="RTPC">
-											
-											
-										<RTPC Name="" ID="{DD35065C-65A3-492F-A756-302C9298B1C2}" ShortID="986672271">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{DD35065C-65A3-492F-A756-302C9298B1C2}" ShortID="986672271">
 														<PropertyList>
 															<Property Name="PropertyName" Type="string" Value="Volume"/>
 														</PropertyList>
@@ -2602,7 +2690,12 @@
 																</Custom>
 															</Reference>
 														</ReferenceList>
-													</RTPC><RTPC Name="" ID="{F44E73FB-CA20-4452-A426-E710825CF25D}" ShortID="1032191451">
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{F44E73FB-CA20-4452-A426-E710825CF25D}" ShortID="1032191451">
 														<PropertyList>
 															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
 														</PropertyList>
@@ -2632,7 +2725,10 @@
 																</Custom>
 															</Reference>
 														</ReferenceList>
-													</RTPC></ObjectList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
 									</ObjectLists>
 									<ActiveSourceList>
 										<ActiveSource Name="Beep" ID="{77E60651-BDCD-4317-85AC-9431BB337527}" Platform="Linked"/>
@@ -2707,9 +2803,9 @@
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="RTPC">
-											
-											
-										<RTPC Name="" ID="{14E05112-84C3-4B4F-863A-1F8966347771}" ShortID="533980330">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{14E05112-84C3-4B4F-863A-1F8966347771}" ShortID="533980330">
 														<PropertyList>
 															<Property Name="PropertyName" Type="string" Value="Volume"/>
 														</PropertyList>
@@ -2739,7 +2835,12 @@
 																</Custom>
 															</Reference>
 														</ReferenceList>
-													</RTPC><RTPC Name="" ID="{E4C306AE-92B1-4C38-A3C8-0280B4309F14}" ShortID="626847032">
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{E4C306AE-92B1-4C38-A3C8-0280B4309F14}" ShortID="626847032">
 														<PropertyList>
 															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
 														</PropertyList>
@@ -2769,7 +2870,10 @@
 																</Custom>
 															</Reference>
 														</ReferenceList>
-													</RTPC></ObjectList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
 									</ObjectLists>
 									<ActiveSourceList>
 										<ActiveSource Name="Beep" ID="{431F3DB6-01BA-4829-B2D9-DE6A45308DC0}" Platform="Linked"/>
@@ -2848,9 +2952,9 @@
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="RTPC">
-											
-											
-										<RTPC Name="" ID="{91B83A77-E5CA-4F4D-94FF-9DD9E8473153}" ShortID="553819617">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{91B83A77-E5CA-4F4D-94FF-9DD9E8473153}" ShortID="553819617">
 														<PropertyList>
 															<Property Name="PropertyName" Type="string" Value="Volume"/>
 														</PropertyList>
@@ -2880,7 +2984,12 @@
 																</Custom>
 															</Reference>
 														</ReferenceList>
-													</RTPC><RTPC Name="" ID="{9E18E335-7167-4AEC-B949-B8EE879DA85A}" ShortID="428518068">
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{9E18E335-7167-4AEC-B949-B8EE879DA85A}" ShortID="428518068">
 														<PropertyList>
 															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
 														</PropertyList>
@@ -2910,7 +3019,10 @@
 																</Custom>
 															</Reference>
 														</ReferenceList>
-													</RTPC></ObjectList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
 									</ObjectLists>
 									<ActiveSourceList>
 										<ActiveSource Name="Beep" ID="{C01C4F73-CF55-4413-B316-07DBD2846750}" Platform="Linked"/>
@@ -2987,9 +3099,9 @@
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="RTPC">
-											
-											
-										<RTPC Name="" ID="{AA73220B-D330-46B8-9B9C-87F0AF773E93}" ShortID="212285838">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{AA73220B-D330-46B8-9B9C-87F0AF773E93}" ShortID="212285838">
 														<PropertyList>
 															<Property Name="PropertyName" Type="string" Value="Lowpass"/>
 														</PropertyList>
@@ -3019,7 +3131,12 @@
 																</Custom>
 															</Reference>
 														</ReferenceList>
-													</RTPC><RTPC Name="" ID="{A9C7EBBC-C180-4A1A-AABF-24571877D245}" ShortID="56424482">
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{A9C7EBBC-C180-4A1A-AABF-24571877D245}" ShortID="56424482">
 														<PropertyList>
 															<Property Name="PropertyName" Type="string" Value="Volume"/>
 														</PropertyList>
@@ -3049,7 +3166,10 @@
 																</Custom>
 															</Reference>
 														</ReferenceList>
-													</RTPC></ObjectList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
 									</ObjectLists>
 									<ActiveSourceList>
 										<ActiveSource Name="Beep" ID="{BA445585-8AE2-4E7B-B6C1-023103F525EE}" Platform="Linked"/>
@@ -3061,5 +3181,5 @@
 				</Folder>
 			</ChildrenList>
 		</WorkUnit>
-	</Containers>
+	</AudioObjects>
 </WwiseDocument>
